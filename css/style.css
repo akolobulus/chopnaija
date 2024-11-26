@@ -31,7 +31,7 @@ section {
 }
 
 section:nth-child(even) {
-  background: #eee;
+  background: #eeeeee;
 }
 
 .sub-heading {
@@ -53,7 +53,7 @@ section:nth-child(even) {
   margin-top: 1rem;
   display: inline-block;
   font-size: 1.7rem;
-  color: #fff;
+  color: #ffffff;
   background: var(--black);
   border-radius: 0.5rem;
   cursor: pointer;
@@ -70,7 +70,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background: #fff;
+  background: #ffffff;
   padding: 1rem 7%;
   display: flex;
   align-items: center;
@@ -103,7 +103,7 @@ header .navbar a {
 
 header .navbar a:active,
 header .navbar a:hover {
-  color: #fff;
+  color: #ffffff;
   background: var(--green);
 }
 
@@ -118,12 +118,12 @@ header .icons a {
   font-size: 1.7rem;
   color: var(--black);
   border-radius: 50%;
-  background: #eee;
+  background: #eeeeee;
 }
 
 header .icons i:hover,
 header .icons a:hover {
-  color: #fff;
+  color: #ffffff;
   background: var(--green);
   transform: rotate(360deg);
 }
@@ -148,15 +148,15 @@ header .icons #menu-bars {
 
 #search-form #search-box {
   width: 50rem;
-  border-bottom: 0.1rem solid #fff;
+  border-bottom: 0.1rem solid #ffffff;
   padding: 1rem 0;
-  color: #fff;
+  color: #ffffff;
   font-size: 3rem;
   background: none;
 }
 
 #search-form #search-box::placeholder {
-  color: #eee;
+  color: #eeeeee;
 }
 
 #search-form #search-box::-webkit-search-cancel-button {
@@ -164,7 +164,7 @@ header .icons #menu-bars {
 }
 
 #search-form label {
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
   font-size: 3rem;
 }
@@ -175,7 +175,7 @@ header .icons #menu-bars {
 
 #search-form #close {
   position: absolute;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
   top: 2rem;
   right: 3rem;
@@ -250,7 +250,7 @@ header .icons #menu-bars {
   height: 10px;
   width: 10px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #bbbbbb;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -272,7 +272,7 @@ header .icons #menu-bars {
 
 .dishes .box-container .box {
   padding: 2.5rem;
-  background: #fff;
+  background: #ffffff;
   border-radius: 0.5rem;
   border: 0.1rem solid rgba(0, 0, 0, 0.2);
   box-shadow: var(--box-shadow);
@@ -285,7 +285,7 @@ header .icons #menu-bars {
 .dishes .box-container .box .fa-eye {
   position: absolute;
   top: 1.5rem;
-  background: #eee;
+  background: #eeeeee;
   border-radius: 50%;
   height: 5rem;
   width: 5rem;
@@ -297,7 +297,7 @@ header .icons #menu-bars {
 .dishes .box-container .box .fa-heart:hover,
 .dishes .box-container .box .fa-eye:hover {
   background: var(--green);
-  color: #fff;
+  color: #ffffff;
 }
 
 .dishes .box-container .box .fa-heart {
@@ -383,7 +383,7 @@ header .icons #menu-bars {
 }
 
 .about .row .content .icons-container .icons {
-  background: #eee;
+  background: #eeeeee;
   border-radius: 0.5rem;
   border: 0.1rem solid rgba(0, 0, 0, 0.2);
   display: flex;
@@ -404,6 +404,83 @@ header .icons #menu-bars {
   color: var(--black);
 }
 
+.menu .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.menu .box-container .box {
+  background: #ffffff;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+.menu .box-container .box .image {
+  height: 25rem;
+  width: 100%;
+  padding: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.menu .box-container .box .image .fa-heart {
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  font-size: 2rem;
+  background: #ffffff;
+  border-radius: 50%;
+  color: var(--black);
+}
+
+.menu .box-container .box .image .fa-heart:hover {
+  background-color: var(--green);
+  color: #ffffff;
+}
+
+.menu .box-container .box .content {
+  padding: 2rem;
+  padding-top: 0;
+}
+
+.menu .box-container .box .content .stars {
+  padding-bottom: 1rem;
+}
+
+.menu .box-container .box .content .stars i {
+  font-size: 1.7rem;
+  color: var(--green);
+}
+
+.menu .box-container .box .content h3 {
+  color: var(--black);
+  font-size: 2.5rem;
+}
+
+.menu .box-container .box .content p {
+  color: var(--light-color);
+  font-size: 1.6rem;
+  padding: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.menu .box-container .box .content .price {
+  color: var(--green);
+  margin-left: 1rem;
+  font-size: 2.5rem;
+}
 /* Media Queries */
 @media (max-width: 991px) {
   html {
@@ -434,7 +511,7 @@ header .icons #menu-bars {
     top: 100%;
     left: 0;
     right: 0;
-    background: #fff;
+    background: #ffffff;
     border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
     border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
     padding: 1rem;
@@ -450,7 +527,7 @@ header .icons #menu-bars {
     padding: 1.5rem;
     margin: 1rem;
     font-size: 2rem;
-    background: #eee;
+    background: #eeeeee;
   }
   #search-form #search-box {
     width: 90%;
