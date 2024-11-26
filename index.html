@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chopnaija</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <a href="#" class="logo"><i class="fa fa-utensils"></i> chopnaija</a>
+      <nav class="navbar">
+        <a class="active" href="#home">Home</a>
+        <a href="#dishes">Dishes</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#order">Order</a>
+      </nav>
+      <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-shopping-cart"></a>
+      </div>
+
+      <!--Search-->
+      <form action="" id="search-form">
+        <input
+          type="search"
+          placeholder="Search here..."
+          name="search"
+          id="search-box"
+        />
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+      </form>
+    </header>
+
+    <!--Home-->
+    <section class="home" id="home">
+      <div class="homeSlider">
+        <div class="wrapper">
+          <div class="slides">
+            <div class="slide">
+              <div class="content">
+                <span> Our Special Dish</span>
+                <h3>Asaro</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#" class="btn">Order Now</a>
+              </div>
+              <div class="image">
+                <img src="images/asaro.jpg" alt="Asaro" />
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="content">
+                <span>Our Special Dish</span>
+                <h3>Fufu</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#" class="btn">Order Now</a>
+              </div>
+              <div class="image">
+                <img src="images/fufu.jpg" alt="Fufu" />
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="content">
+                <span> Our Special Dish</span>
+                <h3>Fried Chicken</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#" class="btn">Order Now</a>
+              </div>
+              <div class="image">
+                <img src="images/fried-chicken.jpg" alt="Fried Chicken" />
+              </div>
+            </div>
+          </div>
+          <div class="dots">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dishes -->
+    <section class="dishes" id="dishes">
+      <h3 class="sub-heading">Our Dishes</h3>
+      <h1 class="heading">Popular Dishes</h1>
+      <div class="box-container">
+        <div class="box">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-eye"></a>
+          <img src="images/noodles.jpg" alt="noodles" />
+          <h3>Banga Soup</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <span>₦1500.00</span>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+
+        <div class="box">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-eye"></a>
+          <img src="images/akpoya-ee.jpg" alt="akpoya-ee" />
+          <h3>Akpoya-ee</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <span>₦1800.00</span>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+
+        <div class="box">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-eye"></a>
+          <img src="images/ofe-nsala.jpg" alt="ofe-nsala" />
+          <h3>Ofe Nsala</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <span>₦2000.00</span>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+
+        <div class="box">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-eye"></a>
+          <img src="images/nood.jpg" alt="noodles" />
+          <h3>Tuwo</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <span>₦1500.00</span>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+
+        <div class="box">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-eye"></a>
+          <img src="images/akpoya-ee.jpg" alt="akpoya-ee" />
+          <h3>Akpoya-ee</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <span>₦1800.00</span>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+
+        <div class="box">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-eye"></a>
+          <img src="images/ofe-nsala.jpg" alt="ofe-nsala" />
+          <h3>Danwake</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <span>₦2000.00</span>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+
+        <div class="box">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-eye"></a>
+          <img src="images/ofe-nsala.jpg" alt="ofe-nsala" />
+          <h3>Efo Riro</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <span>₦5000.00</span>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+
+        <div class="box">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-eye"></a>
+          <img src="images/ofe-nsala.jpg" alt="ofe-nsala" />
+          <h3>Egusi</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <span>₦4500.00</span>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+      </div>
+    </section>
+
+    <!--About-->
+    <section class="about" id="about">
+      <h3 class="sub-heading">About Us</h3>
+      <h1 class="heading">Why Choose Us?</h1>
+      <div class="row">
+        <div class="image">
+          <img src="images/about.png" alt="" />
+        </div>
+        <div class="content">
+          <h3>Best Food in the Country</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="icons-container">
+            <div class="icons">
+              <i class="fas fa-shipping-fast"></i>
+              <span>Free delivery</span>
+            </div>
+
+            <div class="icons">
+              <i class="fas fa-naira-sign"></i>
+              <span>Easy payments</span>
+            </div>
+
+            <div class="icons">
+              <i class="fas fa-headset"></i>
+              <span>24/7 service</span>
+            </div>
+          </div>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!--Menu-->
+    <section class="menu" id="menu">
+      <h3 class="sub-heading">Our Menu</h3>
+      <h1 class="heading">Today's Speciality</h1>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
