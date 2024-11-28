@@ -703,6 +703,9 @@ header .icons #menu-bars {
   .chef-stars .fas {
     font-size: 1.3rem;
   }
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -781,6 +784,24 @@ header .icons #menu-bars {
   .chef-next {
     right: -10px;
   }
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 5%;
+  }
+  .footer-section h3 {
+    font-size: 1.8rem;
+  }
+  .footer-section p,
+  .footer-section ul li {
+    font-size: 1.4rem;
+  }
+  .social-icons a {
+    font-size: 2rem;
+  }
+  .footer-bottom {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -812,5 +833,26 @@ header .icons #menu-bars {
   }
   .chef-next {
     right: --5px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 2rem 3%;
+  }
+  .footer-section h3 {
+    font-size: 1.6rem;
+  }
+  .footer-section p,
+  .footer-section ul li {
+    font-size: 1.2rem;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+  .social-icons a {
+    font-size: 1.5rem;
+  }
+  .footer-bottom {
+    padding: 0.8rem;
+    font-size: 1rem;
   }
 }
