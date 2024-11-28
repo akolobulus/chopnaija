@@ -133,16 +133,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const searchIcon = document.getElementById('search-icon');
-  const searchForm = document.getElementById('search-form');
-  const closeIcon = document.getElementById('close');
+document.addEventListener("DOMContentLoaded", () => {
+  const searchIcon = document.getElementById("search-icon");
+  const searchForm = document.getElementById("search-form");
+  const closeIcon = document.getElementById("close");
 
-  searchIcon.addEventListener('click', () => {
-    searchForm.classList.toggle('active');
+  searchIcon.addEventListener("click", () => {
+    searchForm.classList.toggle("active");
   });
 
-  closeIcon.addEventListener('click', () => {
-    searchForm.classList.remove('active');
+  closeIcon.addEventListener("click", () => {
+    searchForm.classList.remove("active");
   });
 });
