@@ -533,4 +533,8 @@ header .icons #menu-bars {
     width: 90%;
     margin: 0 1rem;
   }
+  .dishes .box-container .box img {
+    height: 12rem;
+    margin: 0.5rem 0;
+  }
 }
