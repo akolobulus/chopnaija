@@ -536,7 +536,6 @@ header .icons #menu-bars {
   margin-bottom: 1rem;
 }
 
-
 .chef-user-info h3 {
   color: var(--black);
   font-size: 2.5rem;
@@ -596,8 +595,6 @@ header .icons #menu-bars {
 .chef-dot:hover {
   background-color: #717171;
 }
-
-
 
 /* Footer Styles */
 .footer-container {
@@ -671,29 +668,63 @@ header .icons #menu-bars {
 }
 
 /* Media Queries */
-@media (max-width: 991px) {
-  html {
-    font-size: 50%;
+@media (max-width: 1200px) {
+  .dishes .box-container {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   }
 
-  .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .dishes .box-container .box img {
-    height: auto;
-    margin: 100%;
+    height: 15rem;
   }
 
-  header {
-    padding: 1rem 2rem;
+  .dishes .box-container .box h3 {
+    font-size: 2rem;
   }
 
-  section {
-    padding: 2rem;
+  .dishes .box-container .box span {
+    font-size: 2rem;
+  }
+  .chef-carousel {
+    padding: 1.5rem 7%;
+  }
+  .chef-carousel .chef-sub-heading {
+    font-size: 1.8rem;
+  }
+  .chef-carousel .chef-heading {
+    font-size: 2.5rem;
+  }
+  .chef-user img {
+    width: 250px;
+    height: 250px;
+  }
+  .chef-user-info h3 {
+    font-size: 2rem;
+  }
+  .chef-stars .fas {
+    font-size: 1.3rem;
   }
 }
 
 @media (max-width: 768px) {
+  .dishes .box-container {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+
+  .dishes .box-container .box {
+    padding: 2rem;
+  }
+
+  .dishes .box-container .box img {
+    height: 13rem;
+  }
+
+  .dishes .box-container .box h3 {
+    font-size: 1.8rem;
+  }
+
+  .dishes .box-container .box span {
+    font-size: 1.8rem;
+  }
   header .icons #menu-bars {
     display: inline-block;
   }
@@ -721,11 +752,65 @@ header .icons #menu-bars {
     font-size: 2rem;
     background: #eeeeee;
   }
-  #search-form #search-box {
-    width: 90%;
-    margin: 0 1rem;
+  .chef-carousel {
+    padding: 1rem 5%;
   }
-  .footer-container {
-    grid-template-columns: 1fr;
+  .chef-carousel .chef-sub-heading {
+    font-size: 1.5rem;
+  }
+  .chef-carousel .chef-heading {
+    font-size: 2rem;
+  }
+  .chef-user img {
+    width: 200px;
+    height: 200px;
+  }
+  .chef-user-info h3 {
+    font-size: 1.8rem;
+  }
+  .chef-stars .fas {
+    font-size: 1.2rem;
+  }
+  .chef-prev,
+  .chef-next {
+    padding: 0.8rem;
+  }
+  .chef-prev {
+    left: -10px;
+  }
+  .chef-next {
+    right: -10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chef-carousel {
+    padding: 0.5rem 3%;
+  }
+  .chef-carousel .chef-sub-heading {
+    font-size: 1.2rem;
+  }
+  .chef-carousel .chef-heading {
+    font-size: 1.5rem;
+  }
+  .chef-user img {
+    width: 150px;
+    height: 150px;
+  }
+  .chef-user-info h3 {
+    font-size: 1.5rem;
+  }
+  .chef-stars .fas {
+    font-size: 1rem;
+  }
+  .chef-prev,
+  .chef-next {
+    padding: 0.5rem;
+  }
+  .chef-prev {
+    left: -5px;
+  }
+  .chef-next {
+    right: --5px;
   }
 }
