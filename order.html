@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chopnaija</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="css/order.css" />
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <a href="#" class="logo"
+        ><i class="fa fa-utensils" aria-label="chopnaija"></i> chopnaija</a
+      >
+      <nav class="navbar">
+        <a class="active" href="#home">Home</a>
+        <a href="#dishes">Dishes</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#chefs">Chefs</a>
+      </nav>
+      <div class="icons">
+        <i class="fas fa-bars" id="menu-bars" aria-label="Menu"></i>
+        <i class="fas fa-search" id="search-icon" aria-label="Search"></i>
+        <a href="#" class="fas fa-heart" aria-label="Favorites"></a>
+        <a href="#" class="fas fa-shopping-cart" aria-label="Cart"></a>
+      </div>
+
+      <!--Search-->
+      <form action="" id="search-form">
+        <input
+          type="search"
+          placeholder="Search here..."
+          name="search"
+          id="search-box"
+        />
+        <label
+          for="search-box"
+          class="fas fa-search"
+          aria-label="Search"
+        ></label>
+        <i class="fas fa-times" id="close" aria-label="Close"></i>
+      </form>
+    </header>
+
+    <section id="order" class="section order">
+      <h2 class="sub-heading">Order Online</h2>
+      <h1 class="heading">Fresh & Delicious</h1>
+
+
+      <div class="order-container">
+        <div class="menu-selection">
+          <h3>Our Menu</h3>
+          <div class="menu-grid" id="menuItems">
+
+          </div>
+        </div>
+
+        <div class="cart-section">
+          <h3>Your Cart</h3>
+          <div id="cart">
+            <p>Your cart is empty</p>
+          </div>
+        </div>
+
+        <div class="order-form">
+          <h3>Delivery Details</h3>
+          <form id="orderForm">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Full Name"
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Phone Number"
+              required
+            />
+            <textarea
+              name="address"
+              id="address"
+              placeholder="Delivery Address"
+              required
+            ></textarea>
+            <textarea
+              name="specialInstructions"
+              id="specialInstructions"
+              placeholder="Special Instructions (Optional)"
+            ></textarea>
+            <button type="submit" class="btn">Place Order</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/order.js"></script>
+  </body>
+</html>

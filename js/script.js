@@ -1,52 +1,121 @@
-const menu = document.querySelector("#menu-bars");
-const navbar = document.querySelector(".navbar");
+// Universal Slider Function
+function createSlider(options) {
+  // Default configuration
+  const defaults = {
+    sliderSelector: '.slider',
+    wrapperSelector: '.slider-wrapper',
+    slideSelector: '.slide',
+    prevSelector: '.prev',
+    nextSelector: '.next',
+    dotsSelector: '.dots',
+    dotSelector: '.dot',
+    dotActiveClass: 'active',
+    autoSlideInterval: 5000,
+    initialSlide: 0
+  };
 
-menu.onclick = () => {
-  menu.classList.toggle("fa-times");
-  navbar.classList.toggle("active");
-};
+  // Merge user options with defaults
+  const config = { ...defaults, ...options };
 
-window.onscroll = () => {
-  menu.classList.remove("fa-times");
-  navbar.classList.remove("active");
-};
+  // Select slider elements
+  const slider = document.querySelector(config.sliderSelector);
+  
+  // Early return if slider not found
+  if (!slider) return null;
 
-document.querySelector("#search-icon").onclick = () => {
-  document.querySelector("#search-form").classList.toggle("active");
-};
+  const wrapper = slider.querySelector(config.wrapperSelector);
+  const slides = slider.querySelectorAll(config.slideSelector);
+  const prev = slider.querySelector(config.prevSelector);
+  const next = slider.querySelector(config.nextSelector);
+  const dotsContainer = slider.querySelector(config.dotsSelector);
+  const dots = dotsContainer ? dotsContainer.querySelectorAll(config.dotSelector) : [];
+  
+  let currentIndex = config.initialSlide;
+  const totalSlides = slides.length;
 
-document.querySelector("#close").onclick = () => {
-  document.querySelector("#search-form").classList.remove("active");
-};
+  // Show specific slide
+  function showSlide(index) {
+    // Ensure index wraps around
+    currentIndex = (index + totalSlides) % totalSlides;
+    
+    // Move slides
+    wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+    
+    // Update active dot if dots exist
+    if (dots.length > 0) {
+      dots.forEach(dot => dot.classList.remove(config.dotActiveClass));
+      dots[currentIndex].classList.add(config.dotActiveClass);
+    }
+  }
 
-let currentIndex = 0;
-const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
+  // Auto slide interval
+  let slideInterval = setInterval(() => {
+    showSlide(currentIndex + 1);
+  }, config.autoSlideInterval);
 
-function showSlide(index) {
-  if (index >= slides.length) currentIndex = 0;
-  if (index < 0) currentIndex = slides.length - 1;
+  // Reset interval when user interacts
+  function resetInterval() {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(() => showSlide(currentIndex + 1), config.autoSlideInterval);
+  }
 
-  slides.forEach((slide, i) => {
-    slide.style.transform = `translateX(${-100 * currentIndex}%)`;
+  // Navigation event listeners
+  if (next) {
+    next.addEventListener('click', () => {
+      resetInterval();
+      showSlide(currentIndex + 1);
+    });
+  }
+
+  if (prev) {
+    prev.addEventListener('click', () => {
+      resetInterval();
+      showSlide(currentIndex - 1);
+    });
+  }
+
+  // Dot navigation
+  if (dots.length > 0) {
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        resetInterval();
+        showSlide(index);
+      });
+    });
+  }
+
+  // Show initial slide
+  showSlide(currentIndex);
+
+  // Return methods for external control if needed
+  return {
+    showSlide,
+    getCurrentIndex: () => currentIndex
+  };
+}
+
+// Initialize sliders when page loads
+document.addEventListener('DOMContentLoaded', () => {
+  // Home slider
+  createSlider({
+    sliderSelector: '.homeSlider',
+    wrapperSelector: '.slides',
+    slideSelector: '.slide',
+    prevSelector: null,
+    nextSelector: null,
+    dotsSelector: '.dots',
+    dotSelector: '.dot'
   });
 
-  dots.forEach((dot) => dot.classList.remove("active"));
-  dots[currentIndex].classList.add("active");
-}
-
-function nextSlide() {
-  currentIndex++;
-  showSlide(currentIndex);
-}
-
-let slideInterval = setInterval(nextSlide, 3000);
-
-function currentSlide(index) {
-  clearInterval(slideInterval);
-  currentIndex = index;
-  showSlide(currentIndex);
-  slideInterval = setInterval(nextSlide, 3000);
-}
-
-showSlide(currentIndex);
+  // Chefs slider
+  createSlider({
+    sliderSelector: '.chef-slider',
+    wrapperSelector: '.chef-wrapper',
+    slideSelector: '.chef-slide',
+    prevSelector: '.chef-prev',
+    nextSelector: '.chef-next',
+    dotsSelector: '.chef-dots',
+    dotSelector: '.chef-dot',
+    dotActiveClass: 'active'
+  });
+});
