@@ -669,6 +669,23 @@ header .icons #menu-bars {
 
 /* Media Queries */
 @media (max-width: 1200px) {
+  header {
+    padding: 1rem 5%;
+  }
+  header .logo {
+    font-size: 2rem;
+  }
+  header .navbar a {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+  }
+  header .icons i,
+  header .icons a {
+    height: 4rem;
+    line-height: 4rem;
+    width: 4rem;
+    font-size: 1.5rem;
+  }
   .dishes .box-container {
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   }
@@ -728,8 +745,11 @@ header .icons #menu-bars {
   .dishes .box-container .box span {
     font-size: 1.8rem;
   }
-  header .icons #menu-bars {
-    display: inline-block;
+  header {
+    padding: 1rem 3%;
+  }
+  header .logo {
+    font-size: 1.8rem;
   }
   header .navbar {
     display: none;
@@ -742,6 +762,7 @@ header .icons #menu-bars {
     border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
     padding: 1rem;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.3s ease;
   }
   header .navbar.active {
     display: flex;
@@ -752,8 +773,18 @@ header .icons #menu-bars {
     display: block;
     padding: 1.5rem;
     margin: 1rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     background: #eeeeee;
+  }
+  header .icons #menu-bars {
+    display: inline-block;
+  }
+  header .icons i,
+  header .icons a {
+    height: 3.5rem;
+    line-height: 3.5rem;
+    width: 3.5rem;
+    font-size: 1.4rem;
   }
   .chef-carousel {
     padding: 1rem 5%;
@@ -805,6 +836,22 @@ header .icons #menu-bars {
 }
 
 @media (max-width: 480px) {
+  header {
+    padding: 1rem 2%;
+  }
+  header .logo {
+    font-size: 1.6rem;
+  }
+  header .navbar a {
+    font-size: 1.5rem;
+  }
+  header .icons i,
+  header .icons a {
+    height: 3rem;
+    line-height: 3rem;
+    width: 3rem;
+    font-size: 1.2rem;
+  }
   .chef-carousel {
     padding: 0.5rem 3%;
   }
