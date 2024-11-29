@@ -146,5 +146,3 @@ document.addEventListener("DOMContentLoaded", () => {
     searchForm.classList.remove("active");
   });
 });
-
-
