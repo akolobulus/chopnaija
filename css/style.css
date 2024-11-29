@@ -197,7 +197,7 @@ header .icons #menu-bars {
 .home .homeSlider .slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  max-width: 100%; /* Ensure slides do not exceed container width */
+  max-width: 100%; 
 }
 
 .home .homeSlider .slides .slide {
@@ -596,6 +596,11 @@ header .icons #menu-bars {
   background-color: #717171;
 }
 
+.chef-slide p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+
 /* Footer Styles */
 .footer-container {
   background-color: var(--black);
@@ -720,6 +725,9 @@ header .icons #menu-bars {
   .chef-stars .fas {
     font-size: 1.3rem;
   }
+  .chef-slide p {
+    font-size: 1.4rem;
+  }
   .footer-container {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -833,6 +841,9 @@ header .icons #menu-bars {
     padding: 1rem;
     font-size: 1.2rem;
   }
+  .chef-slide p {
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -880,6 +891,9 @@ header .icons #menu-bars {
   }
   .chef-next {
     right: --5px;
+  }
+  .chef-slide p {
+    font-size: 1.2rem;
   }
   .footer-container {
     grid-template-columns: 1fr;
